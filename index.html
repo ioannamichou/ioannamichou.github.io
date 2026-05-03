@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ioanna Taxiarchia Michou | Personal Portfolio</title>
+    
+    <!-- Google Fonts: Poppins για μοντέρνα και καθαρή εμφάνιση -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome για τα εικονίδια -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* --- ΒΑΣΙΚΕΣ ΡΥΘΜΙΣΕΙΣ (CSS Reset & Variables) --- */
+        :root {
+            --bg-color: #0f172a; 
+            --text-main: #f8fafc; 
+            --text-muted: #94a3b8; 
+            --accent-color: #38bdf8; 
+            --card-bg: rgba(255, 255, 255, 0.03);
+            --card-border: rgba(255, 255, 255, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* --- LAYOUT & CONTAINERS --- */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 40px;
+            color: var(--text-main);
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 50%;
+            height: 3px;
+            background-color: var(--accent-color);
+            border-radius: 5px;
+        }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding-top: 80px;
+            padding-bottom: 40px;
+        }
+        
+        .hero-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            gap: 50px;
+        }
+
+        .hero-text {
+            flex: 1;
+        }
+
+        .hero-image {
+            flex-shrink: 0;
+        }
+
+        .profile-pic {
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--accent-color);
+            box-shadow: 0 0 25px rgba(56, 189, 248, 0.4);
+            transition: transform 0.4s ease;
+        }
+
+        .profile-pic:hover {
+            transform: scale(1.05);
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 10px;
+        }
+
+        .gradient-text {
+            background: linear-gradient(90deg, #38bdf8, #818cf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero h2 {
+            font-size: 1.5rem;
+            color: var(--text-muted);
+            font-weight: 400;
+            margin-bottom: 30px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 12px 28px;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-color);
+            color: #000;
+            border: 2px solid var(--accent-color);
+            box-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
+        }
+
+        .btn-primary:hover {
+            background-color: transparent;
+            color: var(--accent-color);
+            box-shadow: 0 0 25px rgba(56, 189, 248, 0.6);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--text-main);
+            border: 2px solid var(--card-border);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--text-main);
+            background-color: var(--card-bg);
+        }
+
+        /* --- SUMMARY SECTION --- */
+        .summary-text {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            padding: 30px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+
+        /* --- SKILLS SECTION --- */
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .skill-tag {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 0.95rem;
+            color: var(--text-main);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .skill-tag:hover {
+            border-color: var(--accent-color);
+            color: var(--accent-color);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(56, 189, 248, 0.1);
+        }
+
+        /* --- CARDS (EDUCATION, EXPERIENCE, CERTIFICATIONS) --- */
+        .card-grid {
+            display: grid;
+            gap: 25px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            padding: 25px;
+            border-radius: 15px;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .card-item:not(:last-child) {
+            margin-bottom: 25px;
+            border-bottom: 1px solid var(--card-border);
+            padding-bottom: 25px;
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 10px;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .card-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--accent-color);
+        }
+
+        .card-subtitle {
+            font-size: 1rem;
+            color: var(--text-main);
+            margin-bottom: 5px;
+        }
+
+        .card-date {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            background: rgba(255, 255, 255, 0.1);
+            padding: 4px 10px;
+            border-radius: 12px;
+            white-space: nowrap;
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* --- CONTACT SECTION (ΝΕΟ) --- */
+        .contact-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .contact-item {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            padding: 20px;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            color: var(--text-main);
+            transition: all 0.3s ease;
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .contact-item i {
+            font-size: 1.8rem;
+            color: var(--accent-color);
+        }
+
+        .contact-item:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-color);
+            box-shadow: 0 5px 15px rgba(56, 189, 248, 0.1);
+        }
+
+        .contact-item span {
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        .contact-item small {
+            display: block;
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            font-weight: 400;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            border-top: 1px solid var(--card-border);
+            margin-top: 20px;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .social-icon {
+            font-size: 1.5rem;
+            color: var(--text-muted);
+            transition: color 0.3s ease;
+        }
+
+        .social-icon:hover {
+            color: var(--accent-color);
+        }
+
+        /* --- ANIMATIONS ΓΙΑ ΤΟ SCROLL --- */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .hero h1 { font-size: 3.2rem; }
+            .hero h2 { font-size: 1.3rem; }
+            section { padding: 60px 0; }
+        }
+
+        @media (max-width: 768px) {
+            .hero-content { flex-direction: column-reverse; text-align: center; gap: 30px; }
+            .hero h1 { font-size: 2.6rem; }
+            .hero h2 { font-size: 1.2rem; }
+            .hero-buttons { flex-direction: column; width: 100%; justify-content: center;}
+            .btn { justify-content: center; width: 100%; }
+            .card-header { flex-direction: column; gap: 8px; }
+            .card-date { align-self: flex-start; }
+            .profile-pic { width: 200px; height: 200px; }
+            section { padding: 50px 0; }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 { font-size: 2.2rem; }
+            .section-title { font-size: 1.6rem; }
+            .hero h2 { font-size: 1rem; }
+            .summary-text { padding: 20px; font-size: 1rem; }
+            .card { padding: 15px; }
+            .skill-tag { padding: 8px 15px; font-size: 0.85rem; flex: 1 1 auto; justify-content: center; }
+            .contact-item { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- HERO SECTION -->
+        <section class="hero reveal active">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h2>Hello, I am </h2>
+                    <h1><span class="gradient-text">Ioanna Taxiarchia Michou</span></h1>
+                    <h2>Programmer / Informatics & Telecommunications, University of Peloponnese</h2>
+                    
+                    <div class="hero-buttons">
+                        <a href="https://github.com/ioannamichou" target="_blank" class="btn btn-primary">
+                            <i class="fa-brands fa-github"></i> Take a look at my projects
+                        </a>
+                        <a href="LINK_ΓΙΑ_ΤΟ_PDF_ΣΟΥ" download class="btn btn-secondary">
+                            <i class="fa-solid fa-download"></i> Download CV in PDF
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="hero-image">
+                    <img src="IMG_4660.jpeg" alt="Ioanna Michou" class="profile-pic">
+                </div>
+            </div>
+        </section>
+
+        <!-- SUMMARY SECTION -->
+        <section class="reveal">
+            <h2 class="section-title">About Me</h2>
+            <div class="summary-text">
+                <p>I am a passionate programmer equipped with a solid academic background and a strong desire to create impactful solutions. I excel at tackling complex challenges, rapidly adapting to emerging technologies, and building efficient applications. While I am currently taking my first professional steps, my dedication to clean architecture and code quality speaks for itself through my GitHub repositories.</p>
+            </div>
+        </section>
+
+        <!-- SKILLS SECTION -->
+        <section class="reveal">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-container">
+                <div class="skill-tag"><i class="fa-brands fa-html5"></i> HTML5</div>
+                <div class="skill-tag"><i class="fa-brands fa-css3-alt"></i> CSS3</div>
+                <div class="skill-tag"><i class="fa-brands fa-js"></i> JavaScript</div>
+                <div class="skill-tag"><i class="fa-brands fa-php"></i> PHP</div>
+                <div class="skill-tag"><i class="fa-brands fa-python"></i> Python</div>
+                <div class="skill-tag"><i class="fa-solid fa-database"></i> SQL</div>
+                <div class="skill-tag"><i class="fa-solid fa-c"></i> C</div>
+                <div class="skill-tag"><i class="fa-brands fa-java"></i> Java</div>
+                <div class="skill-tag"><i class="fa-brands fa-windows"></i> Microsoft Office</div>
+                <div class="skill-tag"><i class="fa-solid fa-chart-line"></i> Power BI</div>
+            </div>
+        </section>
+
+        <!-- EDUCATION SECTION -->
+        <section class="reveal">
+            <h2 class="section-title">Education</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <div class="card-item">
+                        <div class="card-header">
+                            <div>
+                                <h3 class="card-title">BSc in Informatics & Telecommunications</h3>
+                                <h4 class="card-subtitle">University of Peloponnese</h4>
+                            </div>
+                            <span class="card-date">2022 - 2026</span>
+                        </div>
+                    </div>
+                    
+                    <div class="card-item" style="border: none; padding-bottom: 0; margin-bottom: 0;">
+                        <div class="card-header" style="margin-bottom: 0;">
+                            <div>
+                                <h3 class="card-title">LRN LEVEL 3 CERTIFICATE IN ESOL INTERNATIONAL (CEF C2)</h3>
+                            </div>
+                            <span class="card-date">2019</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- EXPERIENCE SECTION -->
+        <section class="reveal">
+            <h2 class="section-title">Experience</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <div class="card-header">
+                        <div>
+                            <h3 class="card-title">Customer Service (Server, Barista, Data Entry Clerk)</h3>
+                        </div>
+                        <span class="card-date">2021 - Today</span>
+                    </div>
+                    <p>While outside my core technical field, this role equipped me with essential transferable skills. I developed a strong aptitude for crisis management, working efficiently under pressure, and maintaining seamless communication within a team.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CERTIFICATIONS SECTION -->
+        <section class="reveal">
+            <h2 class="section-title">Certifications</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <div class="card-item">
+                        <div class="card-header">
+                            <div>
+                                <h3 class="card-title">Certificate in Business Intelligence</h3>
+                                <h4 class="card-subtitle">CodeHub & Pfizer</h4>
+                            </div>
+                            <span class="card-date">Nov 2023</span>
+                        </div>
+                    </div>
+
+                    <div class="card-item">
+                        <div class="card-header">
+                            <div>
+                                <h3 class="card-title">Certificate in Cloud Engineering</h3>
+                                <h4 class="card-subtitle">CodeHub & Pfizer</h4>
+                            </div>
+                            <span class="card-date">Nov 2024</span>
+                        </div>
+                    </div>
+
+                    <div class="card-item" style="border: none; padding-bottom: 0; margin-bottom: 0;">
+                        <div class="card-header" style="margin-bottom: 0;">
+                            <div>
+                                <h3 class="card-title">Certificate in Azure AI Fundamentals</h3>
+                                <h4 class="card-subtitle">Microsoft</h4>
+                            </div>
+                            <span class="card-date">Dec 2024</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section class="reveal">
+            <h2 class="section-title">Contact</h2>
+            <div class="contact-container">
+                <!-- Άλλαξε το email σου παρακάτω -->
+                <a href="mailto:ioannamixx@gmail.com" class="contact-item">
+                    <i class="fa-solid fa-envelope"></i>
+                    <div>
+                        <small>Email</small>
+                        <span>ioannamixx@gmail.com</span>
+                    </div>
+                </a>
+
+                <!-- Άλλαξε το τηλέφωνό σου παρακάτω (μην ξεχάσεις το +30 στο href) -->
+                <a href="tel:+306943697058" class="contact-item">
+                    <i class="fa-solid fa-phone"></i>
+                    <div>
+                        <small>Phone</small>
+                        <span>+30 6943 697 058</span>
+                    </div>
+                </a>
+
+                <!-- Άλλαξε το link του LinkedIn παρακάτω -->
+                <a href="www.linkedin.com/in/ioanna-michou-6a7781299" target="_blank" class="contact-item">
+                    <i class="fa-brands fa-linkedin"></i>
+                    <div>
+                        <small>LinkedIn</small>
+                        <span>Ioanna Michou</span>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <!-- Άλλαξε ξανά τα links εδώ αν θες να δουλεύουν και τα εικονίδια στο footer -->
+                <a href="www.linkedin.com/in/ioanna-michou-6a7781299" target="_blank" class="social-icon"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/ioannamichou" target="_blank" class="social-icon"><i class="fa-brands fa-github"></i></a>
+                <a href="mailto:ioannamixx@gmail.com" class="social-icon"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+            <p style="color: var(--text-muted); font-size: 0.9rem;">
+                Designed and developed by Ioanna Michou &copy; 2026
+            </p>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT ΓΙΑ ΤΑ ANIMATIONS (Scroll Fade-in) -->
+    <script>
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 100; // Απόσταση από το κάτω μέρος πριν εμφανιστεί
+
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+
+        // Έλεγχος κατά το scroll
+        window.addEventListener("scroll", reveal);
+        // Έλεγχος κατά την φόρτωση της σελίδας
+        reveal();
+    </script>
+</body>
+</html>
