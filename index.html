@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="el">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ioanna Taxiarchia Michou | Personal Portfolio</title>
+    <title>Ιωάννα Ταξιαρχία Μίχου | Personal Portfolio</title>
     
     <!-- Google Fonts: Poppins για μοντέρνα και καθαρή εμφάνιση -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -114,7 +114,7 @@
         }
 
         .hero h1 {
-            font-size: 4rem;
+            font-size: 3.5rem;
             font-weight: 700;
             line-height: 1.1;
             margin-bottom: 10px;
@@ -127,7 +127,7 @@
         }
 
         .hero h2 {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             color: var(--text-muted);
             font-weight: 400;
             margin-bottom: 30px;
@@ -213,7 +213,7 @@
             box-shadow: 0 5px 15px rgba(56, 189, 248, 0.1);
         }
 
-        /* --- CARDS (EDUCATION, EXPERIENCE, CERTIFICATIONS) --- */
+        /* --- CARDS --- */
         .card-grid {
             display: grid;
             gap: 25px;
@@ -268,12 +268,21 @@
             white-space: nowrap;
         }
 
-        .card p {
+        .card p, .card ul {
             color: var(--text-muted);
             font-size: 0.95rem;
         }
+        
+        .card ul {
+            padding-left: 20px;
+            margin-top: 10px;
+        }
 
-        /* --- CONTACT SECTION (ΝΕΟ) --- */
+        .card ul li {
+            margin-bottom: 8px;
+        }
+
+        /* --- CONTACT SECTION --- */
         .contact-container {
             display: flex;
             flex-wrap: wrap;
@@ -291,7 +300,7 @@
             color: var(--text-main);
             transition: all 0.3s ease;
             flex: 1;
-            min-width: 250px;
+            min-width: 200px;
         }
 
         .contact-item i {
@@ -306,7 +315,7 @@
         }
 
         .contact-item span {
-            font-size: 1rem;
+            font-size: 0.9rem;
             font-weight: 600;
         }
 
@@ -356,15 +365,15 @@
 
         /* Responsive Design */
         @media (max-width: 1024px) {
-            .hero h1 { font-size: 3.2rem; }
-            .hero h2 { font-size: 1.3rem; }
+            .hero h1 { font-size: 3rem; }
+            .hero h2 { font-size: 1.2rem; }
             section { padding: 60px 0; }
         }
 
         @media (max-width: 768px) {
             .hero-content { flex-direction: column-reverse; text-align: center; gap: 30px; }
             .hero h1 { font-size: 2.6rem; }
-            .hero h2 { font-size: 1.2rem; }
+            .hero h2 { font-size: 1.1rem; }
             .hero-buttons { flex-direction: column; width: 100%; justify-content: center;}
             .btn { justify-content: center; width: 100%; }
             .card-header { flex-direction: column; gap: 8px; }
@@ -392,126 +401,257 @@
         <section class="hero reveal active">
             <div class="hero-content">
                 <div class="hero-text">
-                    <h2>Hello, I am </h2>
-                    <h1><span class="gradient-text">Ioanna Taxiarchia Michou</span></h1>
-                    <h2>Programmer / Informatics & Telecommunications, University of Peloponnese</h2>
+                    <h2>Γεια σας, είμαι η</h2>
+                    <h1><span class="gradient-text">Ιωάννα Ταξιαρχία Μίχου</span></h1>
+                    <h2>Φοιτήτρια Πληροφορικής και Τηλεπικοινωνιών, Πανεπιστήμιο Πελοποννήσου</h2>
                     
                     <div class="hero-buttons">
                         <a href="https://github.com/ioannamichou" target="_blank" class="btn btn-primary">
-                            <i class="fa-brands fa-github"></i> Take a look at my projects
+                            <i class="fa-brands fa-github"></i> Δείτε τα projects μου
                         </a>
-                        <a href="LINK_ΓΙΑ_ΤΟ_PDF_ΣΟΥ" download class="btn btn-secondary">
-                            <i class="fa-solid fa-download"></i> Download CV in PDF
+                        <a href="Ιωάννα_Μίχου_2026.pdf" download class="btn btn-secondary">
+                            <i class="fa-solid fa-download"></i> Λήψη Βιογραφικού (PDF)
                         </a>
                     </div>
                 </div>
                 
                 <div class="hero-image">
-                    <img src="IMG_4660.jpeg" alt="Ioanna Michou" class="profile-pic">
+                    <img src="IMG_4660.jpeg" alt="Ιωάννα Μίχου" class="profile-pic">
                 </div>
             </div>
         </section>
 
         <!-- SUMMARY SECTION -->
         <section class="reveal">
-            <h2 class="section-title">About Me</h2>
+            <h2 class="section-title">Σχετικά με εμένα</h2>
             <div class="summary-text">
-                <p>I am a passionate programmer equipped with a solid academic background and a strong desire to create impactful solutions. I excel at tackling complex challenges, rapidly adapting to emerging technologies, and building efficient applications. While I am currently taking my first professional steps, my dedication to clean architecture and code quality speaks for itself through my GitHub repositories.</p>
+                <p>Είμαι τελειόφοιτη φοιτήτρια Πληροφορικής με ισχυρό κίνητρο, έτοιμη να μεταβώ από τον ακαδημαϊκό στον επαγγελματικό χώρο της τεχνολογίας. Απολαμβάνω να αντιμετωπίζω σύνθετες προκλήσεις, από τον πειραματισμό με hardware μέχρι τη συγγραφή κώδικα και την κατανόηση συστημάτων. Αναζητώ μία entry-level θέση ή πρακτική άσκηση, όπου θα μπορέσω να συνεισφέρω σε πραγματικά projects και να διευρύνω τις τεχνικές μου δεξιότητες.</p>
             </div>
         </section>
 
         <!-- SKILLS SECTION -->
         <section class="reveal">
-            <h2 class="section-title">Skills</h2>
+            <h2 class="section-title">Δεξιότητες</h2>
             <div class="skills-container">
-                <div class="skill-tag"><i class="fa-brands fa-html5"></i> HTML5</div>
-                <div class="skill-tag"><i class="fa-brands fa-css3-alt"></i> CSS3</div>
-                <div class="skill-tag"><i class="fa-brands fa-js"></i> JavaScript</div>
-                <div class="skill-tag"><i class="fa-brands fa-php"></i> PHP</div>
+                <div class="skill-tag"><i class="fa-brands fa-html5"></i> HTML/CSS/JS</div>
                 <div class="skill-tag"><i class="fa-brands fa-python"></i> Python</div>
-                <div class="skill-tag"><i class="fa-solid fa-database"></i> SQL</div>
-                <div class="skill-tag"><i class="fa-solid fa-c"></i> C</div>
                 <div class="skill-tag"><i class="fa-brands fa-java"></i> Java</div>
+                <div class="skill-tag"><i class="fa-solid fa-c"></i> C</div>
+                <div class="skill-tag"><i class="fa-brands fa-php"></i> PHP</div>
+                <div class="skill-tag"><i class="fa-solid fa-database"></i> SQL</div>
+                <div class="skill-tag"><i class="fa-brands fa-github"></i> Git/GitHub</div>
+                <div class="skill-tag"><i class="fa-brands fa-linux"></i> Linux</div>
                 <div class="skill-tag"><i class="fa-brands fa-windows"></i> Microsoft Office</div>
-                <div class="skill-tag"><i class="fa-solid fa-chart-line"></i> Power BI</div>
+                <div class="skill-tag"><i class="fa-solid fa-chart-line"></i> PowerBI</div>
+                <div class="skill-tag"><i class="fa-solid fa-microchip"></i> Raspberry Pi & Jetson Nano</div>
+                <div class="skill-tag"><i class="fa-solid fa-plane"></i> Drones</div>
+                <div class="skill-tag"><i class="fa-solid fa-network-wired"></i> 5G, Ethernet & NB-IoT</div>
+                <div class="skill-tag"><i class="fa-solid fa-users"></i> Team Collaboration</div>
+                <div class="skill-tag"><i class="fa-solid fa-lightbulb"></i> Problem Solving</div>
             </div>
         </section>
 
         <!-- EDUCATION SECTION -->
         <section class="reveal">
-            <h2 class="section-title">Education</h2>
+            <h2 class="section-title">Εκπαίδευση</h2>
             <div class="card-grid">
                 <div class="card">
                     <div class="card-item">
                         <div class="card-header">
                             <div>
-                                <h3 class="card-title">BSc in Informatics & Telecommunications</h3>
-                                <h4 class="card-subtitle">University of Peloponnese</h4>
+                                <h3 class="card-title">Πληροφορική και Τηλεπικοινωνίες</h3>
+                                <h4 class="card-subtitle">Πανεπιστήμιο Πελοποννήσου</h4>
                             </div>
-                            <span class="card-date">2022 - 2026</span>
+                            <span class="card-date">2022 - Σήμερα</span>
                         </div>
+                        <p>Εκκρεμεί η κατάθεση πτυχιακής εργασίας και η λήψη του πτυχίου εντός του τρέχοντος έτους.</p>
                     </div>
                     
                     <div class="card-item" style="border: none; padding-bottom: 0; margin-bottom: 0;">
                         <div class="card-header" style="margin-bottom: 0;">
                             <div>
-                                <h3 class="card-title">LRN LEVEL 3 CERTIFICATE IN ESOL INTERNATIONAL (CEF C2)</h3>
+                                <h3 class="card-title">LRN Level 3 Certificate in ESOL International (CEF C2)</h3>
                             </div>
-                            <span class="card-date">2019</span>
+                            <span class="card-date">Ιούλιος 2019</span>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS & PAPERS SECTION (ΝΕΟ) -->
+        <section class="reveal">
+            <h2 class="section-title">Projects & Papers</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <div class="card-header">
+                        <div>
+                            <h3 class="card-title">Διπλωματική Εργασία: Συγκριτική Αξιολόγηση Αρχιτεκτονικών Edge και Server σε Drones</h3>
+                            <h4 class="card-subtitle">Υλοποίηση Containerized Εφαρμογών σε Ετερογενή Δίκτυα (5G, NB-IoT, Ethernet)</h4>
+                        </div>
+                        <span class="card-date">Τρέχουσα</span>
+                    </div>
+                    <ul>
+                        <li>Ανάπτυξη και εκτέλεση εφαρμογών σε Drone, μέσω Docker, σε συσκευές Edge και σε κεντρικούς Server.</li>
+                        <li>Συλλογή και ανάλυση μετρικών απόδοσης για την μετάδοση δεδομένων μέσω διαφορετικών πρωτοκόλλων δικτύου.</li>
+                        <li>Στόχος: Η βελτιστοποίηση της αρχιτεκτονικής συστημάτων σε UAVs για εφαρμογές και επεξεργασία δεδομένων σε πραγματικό χρόνο.</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div>
+                            <h3 class="card-title">Erasmus UOP App</h3>
+                            <h4 class="card-subtitle">HTML, CSS, PHP, JavaScript, JSON, AJAX</h4>
+                        </div>
+                    </div>
+                    <ul>
+                        <li>Ανάπτυξη web εφαρμογής για την υποστήριξη/εξυπηρέτηση των φοιτητών Erasmus του Πανεπιστημίου Πελοποννήσου.</li>
+                        <li>Σχεδιασμός responsive διεπαφής (UI) και υλοποίηση του back-end με PHP.</li>
+                        <li>Χρήση AJAX και JSON για ασύγχρονη ανταλλαγή δεδομένων (δυναμική ανανέωση χωρίς επαναφόρτωση).</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div>
+                            <h3 class="card-title">Trash App</h3>
+                            <h4 class="card-subtitle">Python in ElasticSearch & Kibana</h4>
+                        </div>
+                    </div>
+                    <ul>
+                        <li>Δημιουργία εφαρμογής (μέσω Python) για τη διαχείριση, συλλογή ή/και επεξεργασία δεδομένων σχετικά με τη διαχείριση απορριμμάτων.</li>
+                        <li>Αποθήκευση, οργάνωση και γρήγορη αναζήτηση μεγάλου όγκου δεδομένων (data indexing) μέσω ElasticSearch.</li>
+                        <li>Δημιουργία διαδραστικών γραφημάτων (dashboards) στο Kibana για την οπτικοποίηση των δεδομένων.</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div>
+                            <h3 class="card-title">3D Σπίτι σε VR</h3>
+                            <h4 class="card-subtitle">3ds max & Vizard</h4>
+                        </div>
+                    </div>
+                    <ul>
+                        <li>Τρισδιάστατη μοντελοποίηση (3D modeling), υφές (texturing) και φωτισμός εσωτερικού/εξωτερικού χώρου κατοικίας στο 3ds max.</li>
+                        <li>Εισαγωγή του μοντέλου στην πλατφόρμα Vizard για τη δημιουργία πλήρως διαδραστικού περιβάλλοντος (VR).</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div>
+                            <h3 class="card-title">Σχεδίαση Πανεπιστημίου Πελοποννήσου σε Artsteps</h3>
+                        </div>
+                    </div>
+                    <ul>
+                        <li>Σχεδιασμός και ψηφιακή ανακατασκευή των χώρων του Πανεπιστημίου Πελοποννήσου σε περιβάλλον εικονικής περιήγησης.</li>
+                        <li>Δημιουργία ενός ψηφιακού εκθεσιακού χώρου για την ανάδειξη των εγκαταστάσεων της σχολής.</li>
+                    </ul>
                 </div>
             </div>
         </section>
 
         <!-- EXPERIENCE SECTION -->
         <section class="reveal">
-            <h2 class="section-title">Experience</h2>
+            <h2 class="section-title">Εμπειρία</h2>
             <div class="card-grid">
                 <div class="card">
                     <div class="card-header">
                         <div>
-                            <h3 class="card-title">Customer Service (Server, Barista, Data Entry Clerk)</h3>
+                            <h3 class="card-title">Υπάλληλος Ψηφιοποίησης / Data Entry</h3>
+                            <h4 class="card-subtitle">Χωροβάτης</h4>
                         </div>
-                        <span class="card-date">2021 - Today</span>
+                        <span class="card-date">Φεβρουάριος 2026 - Απρίλιος 2026</span>
                     </div>
-                    <p>While outside my core technical field, this role equipped me with essential transferable skills. I developed a strong aptitude for crisis management, working efficiently under pressure, and maintaining seamless communication within a team.</p>
+                    <p>Καταχώρηση και ψηφιοποίηση δεδομένων.</p>
                 </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div>
+                            <h3 class="card-title">Εξυπηρέτηση Πελατών</h3>
+                            <h4 class="card-subtitle">Εστίαση & Τουρισμός</h4>
+                        </div>
+                        <span class="card-date">2022 - 2026</span>
+                    </div>
+                    <p>Εξυπηρέτηση πελατών στον τομέα της εστίασης και του τουρισμού.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONFERENCES & VOLUNTEERING SECTION (ΝΕΟ) -->
+        <section class="reveal">
+            <h2 class="section-title">Συνέδρια, Εκθέσεις & Εθελοντισμός</h2>
+            <div class="card-grid">
+                
+                <div class="card">
+                    <div class="card-header">
+                        <div>
+                            <h3 class="card-title">Συνέδρια</h3>
+                        </div>
+                    </div>
+                    <ul>
+                        <li><strong>2026:</strong> 2ο Φοιτητικό Συνέδριο Πληροφορικής και Τηλεπικοινωνιών - "UAVs as Autonomous Network Edge Nodes: Field Trials and Validation."</li>
+                        <li><strong>2025:</strong> 1ο Φοιτητικό Συνέδριο Πληροφορικής και Τηλεπικοινωνιών - "Επίδραση της Θέσης του Χρήστη στην Ισχύ Κινητών Τηλεφωνιών σε Εσωτερικά Περιβάλλοντα."</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div>
+                            <h3 class="card-title">Τεχνολογική Έκθεση</h3>
+                        </div>
+                    </div>
+                    <ul>
+                        <li><strong>Kalamata Tech Expo & Intelligent Systems Festival 2026:</strong> Συμμετοχή με το εργαστήριο Ψηφιακών Επικοινωνιών και Συστημάτων του Πανεπιστημίου Πελοποννήσου. Παρουσίαση εργαστηριακών project και ενημέρωση των επισκεπτών σχετικά με τις τρέχουσες δραστηριότητες.</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div>
+                            <h3 class="card-title">Εθελοντισμός</h3>
+                        </div>
+                    </div>
+                    <ul>
+                        <li><strong>2026 & 2025:</strong> Συμμετοχή στο πρόγραμμα "Ζήσε μια μέρα σαν Φοιτητής" του Πανεπιστημίου Πελοποννήσου. Ρόλος: Ξεναγός μαθητών, οργάνωση χώρου.</li>
+                    </ul>
+                </div>
+
             </div>
         </section>
 
         <!-- CERTIFICATIONS SECTION -->
         <section class="reveal">
-            <h2 class="section-title">Certifications</h2>
+            <h2 class="section-title">Πιστοποιήσεις / Σεμινάρια</h2>
             <div class="card-grid">
                 <div class="card">
                     <div class="card-item">
                         <div class="card-header">
                             <div>
-                                <h3 class="card-title">Certificate in Business Intelligence</h3>
-                                <h4 class="card-subtitle">CodeHub & Pfizer</h4>
+                                <h3 class="card-title">Cloud Engineering</h3>
                             </div>
-                            <span class="card-date">Nov 2023</span>
+                            <span class="card-date">Νοέμβριος 2024</span>
                         </div>
                     </div>
 
                     <div class="card-item">
                         <div class="card-header">
                             <div>
-                                <h3 class="card-title">Certificate in Cloud Engineering</h3>
-                                <h4 class="card-subtitle">CodeHub & Pfizer</h4>
+                                <h3 class="card-title">Azure AI Fundamentals</h3>
                             </div>
-                            <span class="card-date">Nov 2024</span>
+                            <span class="card-date">Νοέμβριος 2024</span>
                         </div>
                     </div>
 
                     <div class="card-item" style="border: none; padding-bottom: 0; margin-bottom: 0;">
                         <div class="card-header" style="margin-bottom: 0;">
                             <div>
-                                <h3 class="card-title">Certificate in Azure AI Fundamentals</h3>
-                                <h4 class="card-subtitle">Microsoft</h4>
+                                <h3 class="card-title">Business Intelligence</h3>
                             </div>
-                            <span class="card-date">Dec 2024</span>
+                            <span class="card-date">Νοέμβριος 2023</span>
                         </div>
                     </div>
                 </div>
@@ -520,9 +660,8 @@
 
         <!-- CONTACT SECTION -->
         <section class="reveal">
-            <h2 class="section-title">Contact</h2>
+            <h2 class="section-title">Επικοινωνία</h2>
             <div class="contact-container">
-                <!-- Άλλαξε το email σου παρακάτω -->
                 <a href="mailto:ioannamixx@gmail.com" class="contact-item">
                     <i class="fa-solid fa-envelope"></i>
                     <div>
@@ -531,14 +670,29 @@
                     </div>
                 </a>
 
-                <!-- Άλλαξε το link του LinkedIn παρακάτω -->
-                <a href="www.linkedin.com/in/ioanna-michou-6a7781299" target="_blank" class="contact-item">
+                <a href="https://www.linkedin.com/in/ioannamichou" target="_blank" class="contact-item">
                     <i class="fa-brands fa-linkedin"></i>
                     <div>
                         <small>LinkedIn</small>
                         <span>Ioanna Michou</span>
                     </div>
                 </a>
+                
+                <div class="contact-item">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <div>
+                        <small>Τοποθεσία</small>
+                        <span>Αθήνα</span>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <i class="fa-solid fa-phone"></i>
+                    <div>
+                        <small>Τηλέφωνο</small>
+                        <span>+30 6943697058</span>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -548,8 +702,7 @@
     <footer>
         <div class="container">
             <div class="social-links">
-                <!-- Άλλαξε ξανά τα links εδώ αν θες να δουλεύουν και τα εικονίδια στο footer -->
-                <a href="www.linkedin.com/in/ioanna-michou-6a7781299" target="_blank" class="social-icon"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://www.linkedin.com/in/ioannamichou" target="_blank" class="social-icon"><i class="fa-brands fa-linkedin"></i></a>
                 <a href="https://github.com/ioannamichou" target="_blank" class="social-icon"><i class="fa-brands fa-github"></i></a>
                 <a href="mailto:ioannamixx@gmail.com" class="social-icon"><i class="fa-solid fa-envelope"></i></a>
             </div>
@@ -566,7 +719,7 @@
             for (var i = 0; i < reveals.length; i++) {
                 var windowHeight = window.innerHeight;
                 var elementTop = reveals[i].getBoundingClientRect().top;
-                var elementVisible = 100; // Απόσταση από το κάτω μέρος πριν εμφανιστεί
+                var elementVisible = 100;
 
                 if (elementTop < windowHeight - elementVisible) {
                     reveals[i].classList.add("active");
@@ -574,9 +727,7 @@
             }
         }
 
-        // Έλεγχος κατά το scroll
         window.addEventListener("scroll", reveal);
-        // Έλεγχος κατά την φόρτωση της σελίδας
         reveal();
     </script>
 </body>
